@@ -103,10 +103,6 @@ nav a {
   text-decoration: none;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
 /* MAIN */
 main {
   flex-grow: 1;
@@ -648,7 +644,6 @@ nav.nav-links {
   color: white;
   font-size: 18px;
   padding: 15px;
-  border: none;
   border-radius: 10px;
   font-family: 'Montserrat', sans-serif;
   gap: 10px;
@@ -656,18 +651,43 @@ nav.nav-links {
   margin-left: 25px;
   margin-right: 25px;
   height: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.menu-icon {
+.menu-item:hover {
+  background-color: #B3D6FA;
+  color: black;
+}
+
+.menu-item img {
   width: 30px;
   height: 30px;
   margin-right: 10px;
+  filter: brightness(0) invert(1); /* Make icons white by default */
 }
 
 .menu-item span {
   flex-grow: 2;
   text-align: left;
   font-size: 1.2rem;
+  color: white;
+}
+
+.menu-item:hover span {
+  color: black;
+}
+
+.menu-item .arrow {
+  color: white;
+}
+
+.menu-item:hover .arrow {
+  color: black;
+}
+
+.menu-item:hover img {
+  filter: brightness(0) invert(0); /* Change icons to black on hover */
 }
 
 body.no-scroll {
